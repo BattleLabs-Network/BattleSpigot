@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * Bukkit Operator implementation.
+ */
 public class OperatorRepository {
 
   private final List<UUID> operators = new ArrayList<>();

@@ -4,6 +4,9 @@ import net.minestom.server.MinecraftServer;
 
 import java.util.HashMap;
 
+/**
+ * Start of a simple World loader. I will probably work on this soon.
+ */
 public class WorldLoader {
 
   private final HashMap<Class<? extends World>, World> worldMap = new HashMap<>();

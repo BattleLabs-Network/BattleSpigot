@@ -6,6 +6,9 @@ import net.minestom.server.command.builder.condition.CommandCondition;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+/**
+ * Default condition just to represent how its working
+ */
 public class OperatorCondition implements CommandCondition {
   @Override
   public boolean canUse(@NotNull CommandSender sender, @Nullable String commandString) {

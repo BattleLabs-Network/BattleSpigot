@@ -5,6 +5,10 @@ import net.kyori.adventure.text.Component;
 import net.minestom.server.entity.Player;
 import net.minestom.server.network.packet.server.play.BossBarPacket;
 
+/**
+ * Custom implementation of {@link BossBar}.
+ * Implemented for only one player, so we can easily update everything for only one player and don't have to call an extra BossBar builder
+ */
 public class CustomBossBar {
 
   private final Player player;
@@ -29,7 +33,7 @@ public class CustomBossBar {
     this.player.sendPacket(new BossBarPacket(player.getUuid(), new BossBarPacket.RemoveAction()));
   }
 
-  public void updateAll() {
+  public void recreate() {
     remove();
     display();
   }

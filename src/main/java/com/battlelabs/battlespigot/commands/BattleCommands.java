@@ -6,6 +6,10 @@ import com.battlelabs.battlespigot.commands.information.CommandInfo;
 import net.minestom.server.command.builder.Command;
 import org.jetbrains.annotations.NotNull;
 
+
+/**
+ * Messi code. Need to fix some errors with invalid arguments.
+ */
 public class BattleCommands extends Command implements ProcessableCommands {
   public BattleCommands(@NotNull CommandInfo info) {
     super(info.name(), info.aliases());

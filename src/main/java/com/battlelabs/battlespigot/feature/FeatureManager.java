@@ -6,6 +6,9 @@ import net.minestom.server.event.EventNode;
 
 import java.util.List;
 
+/**
+ * You could say that this is a custom eventbus implementation
+ */
 public class FeatureManager {
 
   private final List<Feature> features = List.of(FeatureFactory.create(CustomItemDrop.class));

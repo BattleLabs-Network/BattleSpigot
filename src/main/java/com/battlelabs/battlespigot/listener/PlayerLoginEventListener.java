@@ -11,6 +11,9 @@ import net.minestom.server.entity.Player;
 import net.minestom.server.event.player.PlayerLoginEvent;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Currently just for testing created. Maybe I add something like a "FirstJoinEvent" to handle first spawns.
+ */
 public class PlayerLoginEventListener {
 
   public void onLogin(@NotNull PlayerLoginEvent event) {

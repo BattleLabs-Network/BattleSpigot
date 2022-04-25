@@ -6,7 +6,11 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
+/**
+ * Repository for every registered command. Optional you can register already initialized classes
+ */
 public class CommandRepository {
+
 
   @SafeVarargs
   public final void register(CommandManager commandManager, Class<? extends ProcessableCommands> @NotNull ... commandClasses) {

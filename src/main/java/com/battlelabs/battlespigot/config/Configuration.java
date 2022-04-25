@@ -2,6 +2,9 @@ package com.battlelabs.battlespigot.config;
 
 import java.nio.file.Path;
 
+/**
+ * Custom configuration using Json as base.
+ */
 public class Configuration {
 
   private final Path folderPath;

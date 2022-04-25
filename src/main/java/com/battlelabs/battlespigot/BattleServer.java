@@ -2,6 +2,7 @@ package com.battlelabs.battlespigot;
 
 import com.battlelabs.battlespigot.commands.CommandRepository;
 import com.battlelabs.battlespigot.commands.commands.DefaultCommands;
+import com.battlelabs.battlespigot.config.ConfigurationProvider;
 import com.battlelabs.battlespigot.feature.FeatureFactory;
 import com.battlelabs.battlespigot.feature.FeatureManager;
 import com.battlelabs.battlespigot.listener.PlayerLoginEventListener;
@@ -23,6 +24,7 @@ public final class BattleServer {
   private final WorldLoader worldLoader = WorldFactory.worldLoader();
   private final OperatorRepository operatorRepository = new OperatorRepository();
   private final CommandRepository commandRepository = new CommandRepository();
+  private final ConfigurationProvider configurationProvider = new ConfigurationProvider();
 
   public static BattleServer singleton() {
     return SINGLETON;
@@ -76,5 +78,13 @@ public final class BattleServer {
 
   public OperatorRepository operatorRepository() {
     return operatorRepository;
+  }
+
+  public CommandRepository commandRepository() {
+    return commandRepository;
+  }
+
+  public ConfigurationProvider configurationProvider() {
+    return configurationProvider;
   }
 }

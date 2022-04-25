@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'com.battlelabs'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+     url 'https://jitpack.io'
+     }
+}
+
+dependencies {
+    implementation("com.github.Minestom:Minestom:3c0abb0409")
+    implementation("de.articdive:jnoise:3.0.2")
+}
+
+test {
+    useJUnitPlatform()
+}

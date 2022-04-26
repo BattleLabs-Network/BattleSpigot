@@ -37,12 +37,14 @@ public final class BattleServer {
   public void start() {
     this.configurationProvider.createIfNotExists(this.configuration);
     this.configuration = this.configurationProvider.load(this.configuration);
+    this.operatorRepository.loadConfig();
     this.setupProxySupport();
     this.registerDefaults();
     this.minecraftServer.start(this.configuration.dataSet().getString("host"), this.configuration.dataSet().getNumber("port").intValue());
   }
 
   public void stop() {
+    this.operatorRepository.saveConfig();
     MinecraftServer.stopCleanly();
   }
 

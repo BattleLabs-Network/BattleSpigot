@@ -10,6 +10,7 @@ import java.lang.annotation.Target;
 public @interface CommandMethod {
 
   String name();
+
   String[] aliases() default {};
 
 }

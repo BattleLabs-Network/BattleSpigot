@@ -47,7 +47,7 @@ public final class BattleServer {
   }
 
   private void setupProxySupport() {
-    JsonObject proxy_support = configuration.dataSet().getObject("proxy_support");
+    final JsonObject proxy_support = configuration.dataSet().getObject("proxy_support");
     if (proxy_support.get("bungeecord").getAsBoolean()) {
       BungeeCordProxy.enable();
     } else {

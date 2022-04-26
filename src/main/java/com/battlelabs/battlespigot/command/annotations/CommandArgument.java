@@ -1,6 +1,8 @@
 package com.battlelabs.battlespigot.command.annotations;
 
-import java.lang.annotation.*;
+import java.lang.annotation.Repeatable;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 @Repeatable(CommandArguments.class)
 @Retention(RetentionPolicy.RUNTIME)

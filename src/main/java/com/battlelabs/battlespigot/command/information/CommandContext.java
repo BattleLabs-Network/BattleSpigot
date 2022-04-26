@@ -1,4 +1,4 @@
-package com.battlelabs.battlespigot.commands.information;
+package com.battlelabs.battlespigot.command.information;
 
 import net.minestom.server.command.CommandSender;
 

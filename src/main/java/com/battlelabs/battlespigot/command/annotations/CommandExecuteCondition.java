@@ -1,4 +1,4 @@
-package com.battlelabs.battlespigot.commands.annotations;
+package com.battlelabs.battlespigot.command.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,9 +7,8 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD})
-public @interface CommandMethod {
+public @interface CommandExecuteCondition {
 
-  String name();
-  String[] aliases() default {};
+  Class<? extends net.minestom.server.command.builder.condition.CommandCondition> condition();
 
 }

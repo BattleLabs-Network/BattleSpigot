@@ -1,11 +1,11 @@
-package com.battlelabs.battlespigot.commands;
+package com.battlelabs.battlespigot.command;
 
-import com.battlelabs.battlespigot.commands.annotations.CommandArgument;
-import com.battlelabs.battlespigot.commands.annotations.CommandExecuteCondition;
-import com.battlelabs.battlespigot.commands.annotations.CommandMethod;
-import com.battlelabs.battlespigot.commands.annotations.CommandPermission;
-import com.battlelabs.battlespigot.commands.information.CommandArgumentInfo;
-import com.battlelabs.battlespigot.commands.information.CommandInfo;
+import com.battlelabs.battlespigot.command.annotations.CommandArgument;
+import com.battlelabs.battlespigot.command.annotations.CommandExecuteCondition;
+import com.battlelabs.battlespigot.command.annotations.CommandMethod;
+import com.battlelabs.battlespigot.command.annotations.CommandPermission;
+import com.battlelabs.battlespigot.command.information.CommandArgumentInfo;
+import com.battlelabs.battlespigot.command.information.CommandInfo;
 import net.minestom.server.command.builder.condition.CommandCondition;
 
 import java.lang.reflect.Field;

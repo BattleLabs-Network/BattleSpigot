@@ -1,4 +1,4 @@
-package com.battlelabs.battlespigot.commands.condition;
+package com.battlelabs.battlespigot.command.condition;
 
 import com.battlelabs.battlespigot.BattleServer;
 import net.minestom.server.command.CommandSender;

@@ -1,6 +1,6 @@
-package com.battlelabs.battlespigot.commands.information;
+package com.battlelabs.battlespigot.command.information;
 
-import com.battlelabs.battlespigot.commands.CommandSubscriber;
+import com.battlelabs.battlespigot.command.CommandSubscriber;
 import net.minestom.server.command.builder.condition.CommandCondition;
 
 import java.util.List;

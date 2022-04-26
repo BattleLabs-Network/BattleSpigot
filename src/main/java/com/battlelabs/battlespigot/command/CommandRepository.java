@@ -1,6 +1,6 @@
-package com.battlelabs.battlespigot.commands;
+package com.battlelabs.battlespigot.command;
 
-import com.battlelabs.battlespigot.commands.information.CommandInfo;
+import com.battlelabs.battlespigot.command.information.CommandInfo;
 import net.minestom.server.command.CommandManager;
 import org.jetbrains.annotations.NotNull;
 

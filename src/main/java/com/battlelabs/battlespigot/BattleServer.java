@@ -1,7 +1,7 @@
 package com.battlelabs.battlespigot;
 
-import com.battlelabs.battlespigot.commands.CommandRepository;
-import com.battlelabs.battlespigot.commands.commands.DefaultCommands;
+import com.battlelabs.battlespigot.command.CommandRepository;
+import com.battlelabs.battlespigot.command.commands.DefaultCommands;
 import com.battlelabs.battlespigot.config.ConfigurationProvider;
 import com.battlelabs.battlespigot.feature.FeatureFactory;
 import com.battlelabs.battlespigot.feature.FeatureManager;

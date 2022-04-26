@@ -1,12 +1,12 @@
-package com.battlelabs.battlespigot.commands.commands;
+package com.battlelabs.battlespigot.command.commands;
 
 import com.battlelabs.battlespigot.BattleServer;
-import com.battlelabs.battlespigot.commands.CommandSubscriber;
-import com.battlelabs.battlespigot.commands.ProcessableCommands;
-import com.battlelabs.battlespigot.commands.annotations.CommandArgument;
-import com.battlelabs.battlespigot.commands.annotations.CommandExecuteCondition;
-import com.battlelabs.battlespigot.commands.annotations.CommandMethod;
-import com.battlelabs.battlespigot.commands.condition.OperatorCondition;
+import com.battlelabs.battlespigot.command.CommandSubscriber;
+import com.battlelabs.battlespigot.command.ProcessableCommands;
+import com.battlelabs.battlespigot.command.annotations.CommandArgument;
+import com.battlelabs.battlespigot.command.annotations.CommandExecuteCondition;
+import com.battlelabs.battlespigot.command.annotations.CommandMethod;
+import com.battlelabs.battlespigot.command.condition.OperatorCondition;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.TextColor;

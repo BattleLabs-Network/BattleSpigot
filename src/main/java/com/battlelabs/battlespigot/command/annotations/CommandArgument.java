@@ -1,4 +1,4 @@
-package com.battlelabs.battlespigot.commands.annotations;
+package com.battlelabs.battlespigot.command.annotations;
 
 import java.lang.annotation.*;
 

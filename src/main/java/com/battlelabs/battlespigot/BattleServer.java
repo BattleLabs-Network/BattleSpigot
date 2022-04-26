@@ -9,10 +9,13 @@ import com.battlelabs.battlespigot.listener.PlayerLoginEventListener;
 import com.battlelabs.battlespigot.operator.OperatorRepository;
 import com.battlelabs.battlespigot.world.WorldFactory;
 import com.battlelabs.battlespigot.world.WorldLoader;
+import com.google.gson.JsonObject;
 import net.minestom.server.MinecraftServer;
 import net.minestom.server.command.CommandManager;
 import net.minestom.server.event.GlobalEventHandler;
 import net.minestom.server.event.player.PlayerLoginEvent;
+import net.minestom.server.extras.bungee.BungeeCordProxy;
+import net.minestom.server.extras.velocity.VelocityProxy;
 
 public final class BattleServer {
 
@@ -25,20 +28,33 @@ public final class BattleServer {
   private final OperatorRepository operatorRepository = new OperatorRepository();
   private final CommandRepository commandRepository = new CommandRepository();
   private final ConfigurationProvider configurationProvider = new ConfigurationProvider();
+  private BattleServerConfiguration configuration = new BattleServerConfiguration();
 
   public static BattleServer singleton() {
     return SINGLETON;
   }
 
   public void start() {
-    // enable proxy support
-//    BungeeCordProxy.enable();
+    this.configurationProvider.createIfNotExists(this.configuration);
+    this.configuration = this.configurationProvider.load(this.configuration);
+    this.setupProxySupport();
     this.registerDefaults();
-    this.minecraftServer.start("127.0.0.1", 25565);
+    this.minecraftServer.start(this.configuration.dataSet().getString("host"), this.configuration.dataSet().getNumber("port").intValue());
   }
 
   public void stop() {
     MinecraftServer.stopCleanly();
+  }
+
+  private void setupProxySupport() {
+    JsonObject proxy_support = configuration.dataSet().getObject("proxy_support");
+    if (proxy_support.get("bungeecord").getAsBoolean()) {
+      BungeeCordProxy.enable();
+    } else {
+      if (proxy_support.get("velocity").getAsJsonObject().get("enabled").getAsBoolean()) {
+        VelocityProxy.enable(proxy_support.get("velocity").getAsJsonObject().get("secret_key").getAsString());
+      }
+    }
   }
 
   private void registerDefaults() {
